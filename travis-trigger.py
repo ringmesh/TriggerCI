@@ -17,7 +17,7 @@ header={
   "Authorization": "user_token"
 }
 
-with open("dependees/project") as file:
+with open("dependees/%s" % project) as file:
     dependees = file.read().splitlines()
 
 for dependee in dependees:
