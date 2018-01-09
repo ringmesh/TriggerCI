@@ -22,4 +22,5 @@ with open("dependees/%s" % project) as file:
 
 for dependee in dependees:
   url="https://api.travis-ci.org/repo/ringmesh%2Fdependee/requests"
-  requests.post(url, data=body, headers=header)
+  result=requests.post(url, data=body, headers=header)
+  print(result.content)
