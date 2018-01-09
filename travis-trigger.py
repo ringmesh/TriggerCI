@@ -1,7 +1,7 @@
 import requests, sys
 
 project=sys.argv[1]
-user_token=2h2q2pzTsgdiGoPJNqQP
+user_token="2h2q2pzTsgdiGoPJNqQP"
 
 
 body={
@@ -21,5 +21,5 @@ with open(dependees/project) as file:
     dependees = file.read().splitlines()
 
 for dependee in dependees:
-  url=https://api.travis-ci.org/repo/ringmesh%2Fdependee/requests
+  url="https://api.travis-ci.org/repo/ringmesh%2Fdependee/requests"
   requests.post(url, data=body, headers=header)
