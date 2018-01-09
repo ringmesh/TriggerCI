@@ -1,8 +1,6 @@
 import json, requests, sys
 
 project=sys.argv[1]
-user_token="2h2q2pzTsgdiGoPJNqQP"
-
 
 body={
   "request": {
@@ -14,7 +12,7 @@ header={
   "Content-Type": "application/json",
   "Accept": "application/json",
   "Travis-API-Version": "3",
-  "Authorization": "user_token"
+  "Authorization": "2h2q2pzTsgdiGoPJNqQP"
 }
 
 with open("dependees/%s" % project) as file:
