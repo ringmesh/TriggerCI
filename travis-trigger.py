@@ -1,4 +1,4 @@
-import requests, sys
+import json, requests, sys
 
 project=sys.argv[1]
 user_token="2h2q2pzTsgdiGoPJNqQP"
@@ -22,5 +22,5 @@ with open("dependees/%s" % project) as file:
 
 for dependee in dependees:
   url="https://api.travis-ci.org/repo/ringmesh%2Fdependee/requests"
-  result=requests.post(url, data=body, headers=header)
+  result=requests.post(url, data=json.dumps(body), headers=header)
   print(result.content)
