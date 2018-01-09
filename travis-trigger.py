@@ -12,7 +12,7 @@ header={
   "Content-Type": "application/json",
   "Accept": "application/json",
   "Travis-API-Version": "3",
-  "Authorization": "token 2h2q2pzTsgdiGoPJNqQP"
+  "Authorization": "token vWjKjmAggvL7L0ohhQpErA"
 }
 
 with open("dependees/%s" % project) as file:
