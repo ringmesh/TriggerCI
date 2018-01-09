@@ -1,4 +1,4 @@
-import json, requests, sys
+import json, requests, sys, urllib
 
 project=sys.argv[1]
 
@@ -19,7 +19,7 @@ with open("dependees/%s" % project) as file:
     dependees = file.read().splitlines()
 
 for dependee in dependees:
-  url="https://api.travis-ci.org/repo/ringmesh%2F%s/requests" % dependee
+  url=urllib.quote_plus("https://api.travis-ci.org/repo/ringmesh/%s/requests" % dependee)
   print(url)
   result=requests.post(url, data=json.dumps(body), headers=header)
   print(result.content)
