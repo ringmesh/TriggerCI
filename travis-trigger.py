@@ -19,7 +19,7 @@ with open("dependees/%s" % project) as file:
     dependees = file.read().splitlines()
 
 for dependee in dependees:
-  url=urllib.quote_plus("https://api.travis-ci.org/repo/ringmesh/%s/requests" % dependee)
+  url="https://api.travis-ci.org/repo/ringmesh%2F{0}/requests".format(dependee)
   print(url)
   result=requests.post(url, data=json.dumps(body), headers=header)
   print(result.content)
